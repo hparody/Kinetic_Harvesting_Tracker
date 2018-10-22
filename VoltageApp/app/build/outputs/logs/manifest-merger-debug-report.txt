@@ -1,0 +1,199 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:2:1-36:12
+MERGED from [com.android.support:design:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\design-28.0.0-rc01.aar\ff7b2eaa1843cab9d0a6d8ef2c59680e\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0-rc02.aar\aa7ac8be4895074716b412c53aa4d5cf\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\ff8093986662a8d5f19703a900df622b\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:transition:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\transition-28.0.0-rc01.aar\ef7573cab0bbfe002d374e6a0aedd85e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0-rc01.aar\62e9c85bc387e64d67724c5d89743d80\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0-rc01.aar\588711aec0b22ec0cae1dfaae9d0919b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0-rc02.aar\d5d45460d1b837061e518e32b5515948\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0-rc02.aar\d747ea059b4ec0fd33669aeb61aa8d5a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0-rc02.aar\b277e19d716e8904397c71f5adb6bc0f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0-rc02.aar\3611fbf0e77fad33563543799a789c38\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\loader-28.0.0-rc02.aar\3314e0ef5f4d300bdc90da2bd6b6bbec\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0-rc02.aar\be87e41d954ee711049aaf90ecb90759\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0-rc02.aar\d433c5c6ab936e013ec89cc482ccbb83\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0-rc02.aar\fa40ed66626f661d11870ad280b19a7d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0-rc02.aar\3f2ced74faa88f9c3500cf5bd73e3482\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0-rc02.aar\17f3a564394d0f82ee1d1422021ffaa4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\customview-28.0.0-rc02.aar\c8943ec3f956341946559b51fe008b02\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0-rc02.aar\64eb987af58b38d595d6cc17996d84fd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0-rc02.aar\e4e1f3066f290d7a1b873f9a20c476d4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-rc02.aar\5ebf13350b1b904fb5d5fb5a1c5d332b\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-rc02.aar\5ef0b361154e0dd087c0ef345ca3edc3\AndroidManifest.xml:17:1-25:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\8e76272263b134e1efa20a468e93b799\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\b7ceacb4a818838b95831889ceacf4e5\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\31838973b36869291531039c1b53f928\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0-rc02.aar\5a4c27c7ce06cd67afaa68f7917bdbfa\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0-rc02.aar\b8bb836bd0ba6bd98d05454d4d067e1a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\print-28.0.0-rc02.aar\a4b7ea782f1ab50b1b7227bbc54f6146\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\7ef3017ac2194209d2d0be318a2cdafd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cursoradapter:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0-rc02.aar\06de96860042233fc66743acec15595a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0-rc02.aar\8abd015c555b9275f47fcc35b6e0f5d4\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:2:1-36:12
+	package
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:3:5-45
+		INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:2:1-36:12
+		INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:2:1-36:12
+		INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.bluetooth_le
+ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:5:5-7:35
+	android:required
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:7:9-32
+	android:name
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:6:9-53
+uses-permission#android.permission.BLUETOOTH
+ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:8:5-68
+	android:name
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:8:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:9:5-74
+	android:name
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:9:22-71
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:10:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:11:5-78
+	android:name
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:11:22-76
+application
+ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:13:5-34:19
+MERGED from [com.android.support:design:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\design-28.0.0-rc01.aar\ff7b2eaa1843cab9d0a6d8ef2c59680e\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\design-28.0.0-rc01.aar\ff7b2eaa1843cab9d0a6d8ef2c59680e\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\ff8093986662a8d5f19703a900df622b\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\ff8093986662a8d5f19703a900df622b\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-rc02.aar\5ebf13350b1b904fb5d5fb5a1c5d332b\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-rc02.aar\5ebf13350b1b904fb5d5fb5a1c5d332b\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-rc02.aar\5ef0b361154e0dd087c0ef345ca3edc3\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-rc02.aar\5ef0b361154e0dd087c0ef345ca3edc3\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-rc02.aar\5ebf13350b1b904fb5d5fb5a1c5d332b\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:18:9-35
+	android:label
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:16:9-41
+	android:roundIcon
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:17:9-62
+	android:icon
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:15:9-57
+	android:allowBackup
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:14:9-35
+	android:theme
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:19:9-40
+activity#com.example.android.voltageapp.MainActivity
+ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:20:9-29:20
+	android:screenOrientation
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:24:13-49
+	android:label
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:22:13-45
+	android:theme
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:23:13-56
+	android:name
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:21:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:25:13-28:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:26:17-69
+	android:name
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:26:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:27:17-77
+	android:name
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:27:27-74
+activity#com.example.android.voltageapp.deleteData
+ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:30:9-33:20
+	android:screenOrientation
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:32:13-49
+	android:name
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:31:13-39
+uses-sdk
+INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\design-28.0.0-rc01.aar\ff7b2eaa1843cab9d0a6d8ef2c59680e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\design-28.0.0-rc01.aar\ff7b2eaa1843cab9d0a6d8ef2c59680e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0-rc02.aar\aa7ac8be4895074716b412c53aa4d5cf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0-rc02.aar\aa7ac8be4895074716b412c53aa4d5cf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\ff8093986662a8d5f19703a900df622b\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\ff8093986662a8d5f19703a900df622b\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:transition:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\transition-28.0.0-rc01.aar\ef7573cab0bbfe002d374e6a0aedd85e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\transition-28.0.0-rc01.aar\ef7573cab0bbfe002d374e6a0aedd85e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0-rc01.aar\62e9c85bc387e64d67724c5d89743d80\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0-rc01.aar\62e9c85bc387e64d67724c5d89743d80\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0-rc01.aar\588711aec0b22ec0cae1dfaae9d0919b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0-rc01] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0-rc01.aar\588711aec0b22ec0cae1dfaae9d0919b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0-rc02.aar\d5d45460d1b837061e518e32b5515948\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0-rc02.aar\d5d45460d1b837061e518e32b5515948\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0-rc02.aar\d747ea059b4ec0fd33669aeb61aa8d5a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0-rc02.aar\d747ea059b4ec0fd33669aeb61aa8d5a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0-rc02.aar\b277e19d716e8904397c71f5adb6bc0f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0-rc02.aar\b277e19d716e8904397c71f5adb6bc0f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0-rc02.aar\3611fbf0e77fad33563543799a789c38\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0-rc02.aar\3611fbf0e77fad33563543799a789c38\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\loader-28.0.0-rc02.aar\3314e0ef5f4d300bdc90da2bd6b6bbec\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\loader-28.0.0-rc02.aar\3314e0ef5f4d300bdc90da2bd6b6bbec\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0-rc02.aar\be87e41d954ee711049aaf90ecb90759\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0-rc02.aar\be87e41d954ee711049aaf90ecb90759\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0-rc02.aar\d433c5c6ab936e013ec89cc482ccbb83\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0-rc02.aar\d433c5c6ab936e013ec89cc482ccbb83\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0-rc02.aar\fa40ed66626f661d11870ad280b19a7d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0-rc02.aar\fa40ed66626f661d11870ad280b19a7d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0-rc02.aar\3f2ced74faa88f9c3500cf5bd73e3482\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0-rc02.aar\3f2ced74faa88f9c3500cf5bd73e3482\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0-rc02.aar\17f3a564394d0f82ee1d1422021ffaa4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0-rc02.aar\17f3a564394d0f82ee1d1422021ffaa4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\customview-28.0.0-rc02.aar\c8943ec3f956341946559b51fe008b02\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\customview-28.0.0-rc02.aar\c8943ec3f956341946559b51fe008b02\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0-rc02.aar\64eb987af58b38d595d6cc17996d84fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0-rc02.aar\64eb987af58b38d595d6cc17996d84fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0-rc02.aar\e4e1f3066f290d7a1b873f9a20c476d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0-rc02.aar\e4e1f3066f290d7a1b873f9a20c476d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-rc02.aar\5ebf13350b1b904fb5d5fb5a1c5d332b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0-rc02.aar\5ebf13350b1b904fb5d5fb5a1c5d332b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-rc02.aar\5ef0b361154e0dd087c0ef345ca3edc3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0-rc02.aar\5ef0b361154e0dd087c0ef345ca3edc3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\8e76272263b134e1efa20a468e93b799\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\8e76272263b134e1efa20a468e93b799\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\b7ceacb4a818838b95831889ceacf4e5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\b7ceacb4a818838b95831889ceacf4e5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\31838973b36869291531039c1b53f928\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\31838973b36869291531039c1b53f928\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0-rc02.aar\5a4c27c7ce06cd67afaa68f7917bdbfa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0-rc02.aar\5a4c27c7ce06cd67afaa68f7917bdbfa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0-rc02.aar\b8bb836bd0ba6bd98d05454d4d067e1a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0-rc02.aar\b8bb836bd0ba6bd98d05454d4d067e1a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\print-28.0.0-rc02.aar\a4b7ea782f1ab50b1b7227bbc54f6146\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\print-28.0.0-rc02.aar\a4b7ea782f1ab50b1b7227bbc54f6146\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\7ef3017ac2194209d2d0be318a2cdafd\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\7ef3017ac2194209d2d0be318a2cdafd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0-rc02.aar\06de96860042233fc66743acec15595a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0-rc02.aar\06de96860042233fc66743acec15595a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0-rc02.aar\8abd015c555b9275f47fcc35b6e0f5d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0-rc02] C:\Users\Hemel Parody\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0-rc02.aar\8abd015c555b9275f47fcc35b6e0f5d4\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Kinetic Harvesting Tracker</string>
+    <string name="tab_text_1">LIVE</string>
+    <string name="tab_text_2">HISTORICS</string>
+    <string name="tab_text_3">BATTERY</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="DISCONNECTED_BLE">OFF</string>
+    <string name="CONNECTED_BLE">ON</string>
+</resources>
