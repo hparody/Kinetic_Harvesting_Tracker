@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#6691AC</color>
+    <color name="colorAccent">#2B5D7E</color>
     <color name="colorProgressBar">#AFB7BC</color>
     <color name="Tab_Selected">#FFFFFF</color>
 

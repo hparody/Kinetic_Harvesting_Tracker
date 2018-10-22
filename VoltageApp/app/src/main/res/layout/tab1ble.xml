@@ -104,7 +104,6 @@
                     android:scaleY="1.4"
                     android:text="OFF/ON  "
                     android:textAlignment="center"
-                    android:textColorLink="@color/colorProgressBar"
                     android:textOff="@string/DISCONNECTED_BLE"
                     android:textOn="@string/CONNECTED_BLE"
                     android:theme="@style/SCBSwitch"
