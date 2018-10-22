@@ -536,4 +536,16 @@ public class Tab1BLE extends Fragment{
             }
         }
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();scanLeDevice(false);
+        mLeDevices.clear();
+        notificationManager.cancelAll();
+        if(mConnected) {
+            mBluetoothGatt.disconnect();
+        }
+        saveData.cancel(true);
+        mBluetoothAdapter.disable();
+    }
 }

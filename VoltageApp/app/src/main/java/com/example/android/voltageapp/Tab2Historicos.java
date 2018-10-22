@@ -400,8 +400,6 @@ public class Tab2Historicos extends Fragment implements
                         xAxis.setGranularity(1);
                         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
                         xAxis.setLabelRotationAngle(-45.0f);
-
-
                     } else {
                         YAxis yAxis = mChart.getAxisLeft();
                         yAxis.removeAllLimitLines();
@@ -429,7 +427,6 @@ public class Tab2Historicos extends Fragment implements
                 mChart2.notifyDataSetChanged();
                 mChart2.invalidate();
                 xAxis.setValueFormatter(new MyXAxisValueFormatter(values));
-
                 int i2 = 0;
                 mEnergy = 0;
                 while (i2 < values2.length) {
@@ -482,8 +479,16 @@ public class Tab2Historicos extends Fragment implements
                     i2++;
                     x = true;
                 }
-                mChart.getDescription().setText("Generated Voltage [V]");
-                mChart2.getDescription().setText("Generated Power [uW]");
+                if (!yvaluesString.isEmpty()){
+                    mChart.getDescription().setText("Max Voltage [V] = " + String.valueOf(maxVoltage));
+                }else {
+                    mChart.getDescription().setText("Generated Voltage [V]");
+                }
+                if (!yvalues2String.isEmpty()){
+                    mChart2.getDescription().setText("Max Power [uW] = " + String.valueOf(maxPower));
+                }else{
+                    mChart2.getDescription().setText("Generated Power [uW]");
+                }
                 xAxis2.setValueFormatter(new MyXAxisValueFormatter(values2));
                 String partialEnergy = String.format("%.2f", mEnergy);
                 String totalEnergy = "Energy [uJ]: " + partialEnergy;
