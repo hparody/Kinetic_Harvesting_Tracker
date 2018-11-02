@@ -83,6 +83,10 @@ public class Tab2Historicos extends Fragment implements
     String textTimeFrom;
     String textTimeTo;
 
+<<<<<<< HEAD
+=======
+    // declaracion de los arraylists
+>>>>>>> e2aa6dc074d20e8fbad2044b4fa2503ddb856c7a
     ListView listViewPersonas;
     ArrayList<String> listaInformacion;
     ArrayList<HeartRate> listaHeartRate;
