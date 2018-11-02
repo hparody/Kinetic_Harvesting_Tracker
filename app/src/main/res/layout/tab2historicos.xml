@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_horizontal"
+                        android:text="FROM:"
+                        android:textColor="#000"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/textViewFrom"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:hint="Date:"/>
+                    <EditText
+                        android:id="@+id/timeini"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:focusableInTouchMode="false"
+                        android:hint="Time:"
+                        android:inputType="datetime"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="TO:"
+                        android:textColor="#000"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/textViewTo"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:focusableInTouchMode="false"
+                        android:hint="Date:"
+                        android:inputType="datetime"/>
+                    <EditText
+                        android:id="@+id/timeFin"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:focusableInTouchMode="false"
+                        android:hint="Time:"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Search"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ListView
+                    android:id="@+id/listViewPersonas"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    tools:ignore="Suspicious0dp">
+                </ListView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="0dp">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:visibility="visible"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:focusableInTouchMode="false">
+                </com.github.mikephil.charting.charts.LineChart>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart2"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:visibility="visible"
+                    android:layout_marginBottom="10dp"
+                    android:paddingBottom="10dp">
+                </com.github.mikephil.charting.charts.LineChart>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tv_energy"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:textColor="#1d4dd0"
+                        android:layout_centerVertical="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="Delete Data"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:layout_toLeftOf="@id/delete"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageButton
+                        android:id="@+id/delete"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:foregroundGravity="center_vertical"
+                        android:background="@drawable/delete_btn_background"
+                        android:src="@drawable/ic_delete"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
