@@ -125,7 +125,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="FakeData"
-                    android:visibility="gone" />
+                    android:onClick="registrarTramaFalsa"
+                    android:visibility="visible" />
 
                 <ProgressBar
                     android:id="@+id/pb_loading_indicator"
