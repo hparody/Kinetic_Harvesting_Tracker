@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    android:paddingLeft="10dp"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -61,22 +60,23 @@
             <RelativeLayout
                 android:id="@+id/relativeLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="59dp"
+                android:layout_height="64dp"
                 android:layout_marginTop="20dp">
 
                 <TextView
                     android:id="@+id/tv_received_data"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="53dp"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="false"
-                    android:layout_marginStart="34dp"
-                    android:layout_marginLeft="34dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="40dp"
-                    android:layout_marginRight="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="54dp"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="57dp"
+                    android:layout_marginRight="57dp"
+                    android:layout_marginBottom="6dp"
                     android:layout_toEndOf="@+id/sw_Btn_Connect"
                     android:layout_toRightOf="@+id/sw_Btn_Connect"
                     android:foregroundGravity="center_vertical|center_horizontal|center"
@@ -95,17 +95,18 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="9dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center_vertical|center_horizontal"
                     android:scaleX="1.4"
                     android:scaleY="1.4"
-                    android:text="OFF/ON"
+                    android:text="OFF/ON  "
                     android:textAlignment="center"
-                    android:textColorLink="@color/colorAccent"
                     android:textOff="@string/DISCONNECTED_BLE"
                     android:textOn="@string/CONNECTED_BLE"
+                    android:theme="@style/SCBSwitch"
                     android:textSize="16dp"
                     app:layout_constraintEnd_toStartOf="@+id/tv_received_data"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -117,7 +118,7 @@
             <RelativeLayout
                 android:id="@+id/relative_layout_pb"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="61dp">
 
                 <Button
                     android:id="@+id/btn_fake_data"
@@ -135,6 +136,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_vertical|center_horizontal|center"
                     android:indeterminate="false"
+                    android:progressTint="@color/colorProgressBar"
                     tools:visibility="invisible" />
             </RelativeLayout>
         </LinearLayout>

@@ -85,7 +85,7 @@ public class Tab1BLE extends Fragment{
     private static final int REQUEST_ENABLE_BT = 1;
     public static final String NO_DATA_MESSAGE = "No Data";
     public String TAG = "BATTERY_MONITOR";
-    private static final int PERMISSION_REQUEST_COARSE_LOCATION = 456;
+        private static final int PERMISSION_REQUEST_COARSE_LOCATION = 456;
     public boolean LOCATION_PERMISSION;
 
     // Stops scanning after 5 seconds or when the device is found.
@@ -118,7 +118,7 @@ public class Tab1BLE extends Fragment{
 
     // LilyPAD parameters
     public static final String MAC_ADDRESS_A = "F8:76:6C:D1:B2:1C"; // Accelerometer
-    public static final String MAC_ADDRESS_H = "DA:37:F6:57:FE:83"; // Heart Rate
+    public static final String MAC_ADDRESS_H = "E8:3D:1C:A4:7C:A2"; // Heart Rate
     private static final UUID UUID_SERVICE = UUID.fromString("0000fe84-0000-1000-8000-00805f9b34fb");
     private static final UUID UUID_CHARACTERISTIC_READ = UUID.fromString("2d30c082-f39f-4ce6-923f-3484ea480596");
     public static final UUID UUID_DESCRIPTOR = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
@@ -535,5 +535,17 @@ public class Tab1BLE extends Fragment{
                 }
             }
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();scanLeDevice(false);
+        mLeDevices.clear();
+        notificationManager.cancelAll();
+        if(mConnected) {
+            mBluetoothGatt.disconnect();
+        }
+        saveData.cancel(true);
+        mBluetoothAdapter.disable();
     }
 }

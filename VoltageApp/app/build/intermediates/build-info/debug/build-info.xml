@@ -6,23 +6,26 @@
     density="xxhdpi"
     format="10"
     plugin-version="3.2.0"
-    timestamp="1540172407212"
+    timestamp="1541128243842"
     token="2121490147970335520"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="19840" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="620" />
     <task
         name="verifier"
-        duration="0" />
+        duration="337" />
 
+    <artifact
+        location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        type="SPLIT" />
     <artifact
         location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
@@ -51,9 +54,6 @@
         location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
         location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
         type="SPLIT" />
     <artifact
@@ -62,8 +62,11 @@
 
     <build
         build-mode="FULL"
-        timestamp="1540172407212"
+        timestamp="1541128243842"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
         <artifact
             location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
@@ -90,9 +93,6 @@
             type="SPLIT" />
         <artifact
             location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\split-apk\debug\slices\slice_0.apk"

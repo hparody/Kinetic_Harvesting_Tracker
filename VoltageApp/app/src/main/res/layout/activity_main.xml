@@ -19,7 +19,7 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabIndicatorColor="@android:color/background_light">
+            app:tabIndicatorColor="@color/Tab_Selected">
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabItem"
