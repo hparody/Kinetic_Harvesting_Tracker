@@ -25,10 +25,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_voltage_round"
         android:supportsRtl="true"
-<<<<<<< HEAD
-=======
-        android:testOnly="true"
->>>>>>> e2aa6dc074d20e8fbad2044b4fa2503ddb856c7a
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.android.voltageapp.MainActivity"
