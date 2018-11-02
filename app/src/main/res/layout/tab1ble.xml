@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:paddingTop="0dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="121dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="serif"
+                android:text="Kinetic Harvesting Tracker"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/martel_sans_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="221dp"
+                    android:layout_marginTop="0dp"
+                    android:src="@drawable/batteryred" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_received_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="53dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="54dp"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="57dp"
+                    android:layout_marginRight="57dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toEndOf="@+id/sw_Btn_Connect"
+                    android:layout_toRightOf="@+id/sw_Btn_Connect"
+                    android:foregroundGravity="center_vertical|center_horizontal|center"
+                    android:gravity="center_horizontal"
+                    android:text="Current Voltage"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+                <Switch
+                    android:id="@+id/sw_Btn_Connect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:scaleX="1.4"
+                    android:scaleY="1.4"
+                    android:text="OFF/ON  "
+                    android:textAlignment="center"
+                    android:textOff="@string/DISCONNECTED_BLE"
+                    android:textOn="@string/CONNECTED_BLE"
+                    android:theme="@style/SCBSwitch"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_received_data"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_received_data"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_pb"
+                android:layout_width="match_parent"
+                android:layout_height="61dp">
+
+                <Button
+                    android:id="@+id/btn_fake_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FakeData"
+                    android:onClick="registrarTramaFalsa"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/pb_loading_indicator"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_vertical|center_horizontal|center"
+                    android:indeterminate="false"
+                    android:progressTint="@color/colorProgressBar"
+                    tools:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
