@@ -105,23 +105,23 @@ public final class R {
         public static final int left = 0x7f0a0065;
         public static final int line1 = 0x7f0a0066;
         public static final int line3 = 0x7f0a0067;
-        public static final int none = 0x7f0a0078;
-        public static final int normal = 0x7f0a0079;
-        public static final int notification_background = 0x7f0a007a;
-        public static final int notification_main_column = 0x7f0a007b;
-        public static final int notification_main_column_container = 0x7f0a007c;
-        public static final int right = 0x7f0a008b;
-        public static final int right_icon = 0x7f0a008c;
-        public static final int right_side = 0x7f0a008d;
-        public static final int start = 0x7f0a00b5;
-        public static final int tag_transition_group = 0x7f0a00bf;
-        public static final int tag_unhandled_key_event_manager = 0x7f0a00c0;
-        public static final int tag_unhandled_key_listeners = 0x7f0a00c1;
-        public static final int text = 0x7f0a00c2;
-        public static final int text2 = 0x7f0a00c3;
-        public static final int time = 0x7f0a00cf;
-        public static final int title = 0x7f0a00d4;
-        public static final int top = 0x7f0a00d7;
+        public static final int none = 0x7f0a0076;
+        public static final int normal = 0x7f0a0077;
+        public static final int notification_background = 0x7f0a0078;
+        public static final int notification_main_column = 0x7f0a0079;
+        public static final int notification_main_column_container = 0x7f0a007a;
+        public static final int right = 0x7f0a0089;
+        public static final int right_icon = 0x7f0a008a;
+        public static final int right_side = 0x7f0a008b;
+        public static final int start = 0x7f0a00b3;
+        public static final int tag_transition_group = 0x7f0a00bd;
+        public static final int tag_unhandled_key_event_manager = 0x7f0a00be;
+        public static final int tag_unhandled_key_listeners = 0x7f0a00bf;
+        public static final int text = 0x7f0a00c0;
+        public static final int text2 = 0x7f0a00c1;
+        public static final int time = 0x7f0a00cc;
+        public static final int title = 0x7f0a00d1;
+        public static final int top = 0x7f0a00d4;
     }
     public static final class integer {
         private integer() {}

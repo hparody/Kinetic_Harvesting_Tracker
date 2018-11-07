@@ -22,6 +22,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.FloatRange;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -108,6 +109,7 @@ public class Tab1BLE extends Fragment{
     private static final int PENDING_INTENT_START_MAIN_ACTIVITY = 1;
     private static final int PENDING_INTENT_CLOSE_APP = 2;
     private static final String Notification_Channel_ID = "1";
+
     private static final String CLOSE_APP_ACTION = "CLOSE_APP_BROADCAST";
     private static final String OPEN_APP_ACTION = "OPEN_APP_BROADCAST";
     public String currentHearthRateLabel = "Current Voltage: ";
@@ -439,11 +441,7 @@ public class Tab1BLE extends Fragment{
 
         @Override
         protected String doInBackground(String... data) {
-            return data[0];
-        }
-
-        @Override
-        protected void onPostExecute(String Message){
+            String Message = data[0];
             currentHearthRate = currentHearthRateLabel + Message + " V";
             String messageToShow = Message + " V";
             showMessage(messageToShow);
@@ -452,6 +450,11 @@ public class Tab1BLE extends Fragment{
             mPower = Float.parseFloat(String.valueOf(power));
             registrarTramaBLE(mPower,mVoltage);
             triggerNotification(currentHearthRate);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String Message){
         }
     }
 
@@ -507,7 +510,7 @@ public class Tab1BLE extends Fragment{
         horadecimal.append(horasinsegundos);
         String horadecimalnew = horadecimal.toString();
         String horamilli = String.valueOf(System.currentTimeMillis());
-        Double Result = (Math.random()*((3.3)+1));
+        Double Result = (Math.random()*((5.0)+1));
         Double potencia_d =  Math.pow(Result, 2)/0.474;
         String fakepotencia = String.valueOf(potencia_d);
         String Tramanew = String.valueOf(Result);

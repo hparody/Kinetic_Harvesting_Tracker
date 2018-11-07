@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.net.wifi.WifiManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -58,6 +59,7 @@ public class Tab2Historicos extends Fragment implements
         OnChartGestureListener, OnChartValueSelectedListener {
 
     private double mEnergy;
+    private double rawEnergy;
     TextView tvEnergy;
 
     EditText dateTo;
@@ -91,6 +93,7 @@ public class Tab2Historicos extends Fragment implements
     ArrayList<HeartRate> listaTrama;
     ArrayList<Double> listaTramaDouble;
 //    SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
+    Float capacitor = Float.parseFloat("1000");
 
     //Here starts the LineChart Code
     ConexionSQLiteHelper conn;
@@ -98,7 +101,7 @@ public class Tab2Historicos extends Fragment implements
     ImageButton deleteData;
 
     private static final String TAG = "Tab2Historicos";
-    private LineChart mChart, mChart2;
+    private LineChart mChart;
 
     @Override
     public void onChartGestureStart(MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture) {
@@ -248,6 +251,7 @@ public class Tab2Historicos extends Fragment implements
         });
 
 
+
         //GRAFICA 1, PARAMETROS INICIALES PREVIO A BÚSQUEDA - VOLTAJE
         mChart = (LineChart) rootView.findViewById(R.id.lineChart);
         mChart.setOnChartGestureListener(Tab2Historicos.this);
@@ -262,7 +266,7 @@ public class Tab2Historicos extends Fragment implements
         yAxis.enableGridDashedLine(10f,10f,0f);
         yAxis.setDrawLimitLinesBehindData(true);
         ArrayList<Entry> yvalues = new ArrayList<>();
-        yvalues.add(new Entry(0,60f));
+        yvalues.add(new Entry(0,5f));
         ArrayList<ILineDataSet> dataSets = new ArrayList<>();
         LineDataSet set1 = new LineDataSet(yvalues, "Generated Voltage [V]");
         dataSets.add(set1);
@@ -273,32 +277,6 @@ public class Tab2Historicos extends Fragment implements
         set1.setCircleColor(Color.TRANSPARENT);
         set1.setValueTextColor(Color.TRANSPARENT);
         mChart.getDescription().setText("Generated Voltage [V]");
-
-        //GRAFICA 2, PARAMETROS INICIALES PREVIO A BÚSQUEDA - POTENCIA
-        mChart2 = (LineChart) rootView.findViewById(R.id.lineChart2);
-        mChart2.setOnChartGestureListener(Tab2Historicos.this);
-        mChart2.setOnChartValueSelectedListener(Tab2Historicos.this);
-        mChart2.setDragEnabled(true);
-        mChart2.setScaleEnabled(true);
-        mChart2.setNoDataText("Seleccione un Intervalo de Tiempo Válido");
-        final YAxis yAxis2 = mChart2.getAxisLeft();
-        yAxis2.removeAllLimitLines();
-        yAxis2.setAxisMaximum(25);
-        yAxis2.setAxisMinimum(0f);
-        yAxis2.enableGridDashedLine(10f,10f,0f);
-        yAxis2.setDrawLimitLinesBehindData(true);
-        final ArrayList<Entry> yvalues2= new ArrayList<>();
-        yvalues2.add(new Entry(0,60f));
-        ArrayList<ILineDataSet> dataSets2=new ArrayList<>();
-        LineDataSet set2 = new LineDataSet(yvalues2, "Generated Power [uW]");
-        dataSets2.add(set2);
-        final LineData data2 = new LineData(dataSets2);
-        mChart2.setData(data2);
-        mChart2.getAxisRight().setEnabled(false);
-        set2.setColor(Color.TRANSPARENT);
-        set2.setCircleColor(Color.TRANSPARENT);
-        set2.setValueTextColor(Color.TRANSPARENT);
-        mChart2.getDescription().setText("Generated Power [uW]");
 
         search = rootView.findViewById(R.id.search);
         search.setOnClickListener(new View.OnClickListener() {
@@ -331,8 +309,12 @@ public class Tab2Historicos extends Fragment implements
                     }
                 });
 
+                Log.w("INFO", "Fecha: "+textDateFROM);
                 SQLiteDatabase db = conn.getReadableDatabase();
-                Cursor cursor = db.rawQuery("SELECT " + Utilidades.CAMPO_TRAMA + "," + Utilidades.CAMPO_HORA + "," + Utilidades.CAMPO_POTENCIA + "," + Utilidades.CAMPO_DATE_TIME + " FROM " + Utilidades.TABLA_HEARTRATE + " WHERE " + Utilidades.CAMPO_DATE_TIME + " >= Datetime('" + textDateFROM + textTimeFrom + "') AND " + Utilidades.CAMPO_DATE_TIME + "<= Datetime('" + textDateTO + textTimeTo + "')", null);
+                Cursor cursor = db.rawQuery("SELECT " + Utilidades.CAMPO_TRAMA + "," + Utilidades.CAMPO_HORA + "," +
+                        Utilidades.CAMPO_POTENCIA + "," + Utilidades.CAMPO_DATE_TIME + " FROM " + Utilidades.TABLA_HEARTRATE +
+                        " WHERE " + Utilidades.CAMPO_DATE_TIME + " >= Datetime('" + textDateFROM + textTimeFrom + "') AND " +
+                        Utilidades.CAMPO_DATE_TIME + "<= Datetime('" + textDateTO + textTimeTo + "')", null);
                 ArrayList<Entry> yvalues = new ArrayList<>();
                 ArrayList<String> valuesList = new ArrayList<>();
                 ArrayList<Entry> yvalues2 = new ArrayList();
@@ -357,25 +339,22 @@ public class Tab2Historicos extends Fragment implements
                 String[] values2 = valuesList2.toArray(new String[valuesList.size()]);
                 String[] yAxisValues = yvalues2String.toArray(new String[yvalues2String.size()]);
                 String[] yAxisVoltage = yvaluesString.toArray(new String[yvaluesString.size()]);
-                Log.w(TAG, "yAxisValues" + yAxisValues);
                 String[] dateTimeValues = dateTime.toArray(new String[dateTime.size()]);
                 Float[] yVoltageFloat = convertStringArraytoFloatArray(yAxisVoltage);
                 Float[] yPowerFloat = convertStringArraytoFloatArray(yAxisValues);
                 Float maxVoltage;
-                Float maxPower;
+
                 if (!yvaluesString.isEmpty()) {
                     maxVoltage = Float.parseFloat(Collections.max(yvaluesString)) + Float.parseFloat("0.1");
                 } else {
                     maxVoltage = Float.parseFloat("3");
                 }
-                if (!yvalues2String.isEmpty()) {
-                    maxPower = Float.parseFloat(Collections.max(yvalues2String)) + Float.parseFloat("0.1");
-                } else {
-                    maxPower = Float.parseFloat("25");
-                }
+
                 XAxis xAxis = mChart.getXAxis();
-                XAxis xAxis2 = Tab2Historicos.this.mChart2.getXAxis();
-                int i1 = 0;
+                int i1 = 0; mEnergy = 0; rawEnergy = 0;
+                Log.w("INFO",yvaluesString.toString() );
+                Float pastVoltage;
+                Float currentVoltage;
                 while (i1 < values.length) {
                     boolean z = true;
                     if (values[i1] != null) {
@@ -398,10 +377,23 @@ public class Tab2Historicos extends Fragment implements
                         dataSets.add(set1);
                         LineData data = new LineData(dataSets);
                         mChart.setData(data);
-                        mChart.getDescription().setEnabled(false);
+                        mChart.getDescription().setEnabled(true);
                         xAxis.setGranularity(1);
                         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
                         xAxis.setLabelRotationAngle(-45.0f);
+                        if(i1 == 0){
+                            pastVoltage = Float.parseFloat("0");
+                        }else{
+                            pastVoltage = yVoltageFloat[i1-1];
+                        }
+                        currentVoltage = yVoltageFloat[i1];
+                        rawEnergy = 0.5*capacitor*(Math.pow(currentVoltage, 2) - Math.pow(pastVoltage,2 ));
+                        if(rawEnergy < 0){
+                            if(currentVoltage > Float.parseFloat("3.75")){
+                                Log.w("INFO","mEnergy: "+mEnergy);
+                                mEnergy = mEnergy + Math.abs(rawEnergy);
+                            }
+                        }
                     } else {
                         YAxis yAxis = mChart.getAxisLeft();
                         yAxis.removeAllLimitLines();
@@ -426,79 +418,18 @@ public class Tab2Historicos extends Fragment implements
                 }
                 mChart.notifyDataSetChanged();
                 mChart.invalidate();
-                mChart2.notifyDataSetChanged();
-                mChart2.invalidate();
                 xAxis.setValueFormatter(new MyXAxisValueFormatter(values));
-                int i2 = 0;
-                mEnergy = 0;
-                while (i2 < values2.length) {
-                    Boolean x = true;
-                    //GRAFICA 2
-                    LineDataSet set2 = new LineDataSet(yvalues2, "Generated Power [uW]");
-                    set2.setFillAlpha(110);
-                    set2.setColor(Color.BLUE);
-                    set2.setLineWidth(2f);
-                    YAxis yAxis2 = mChart2.getAxisLeft();
-                    yAxis2.setAxisMaximum(maxPower);
-                    yAxis2.setAxisMinimum(0f);
-                    set2.setCircleColor(R.color.colorPrimary);
-                    set2.setValueTextSize(10f);
-                    set2.setValueTextColor(R.color.colorPrimary);
-                    set2.setDrawFilled(true);
-                    Drawable drawable2 = ContextCompat.getDrawable(getActivity(), R.drawable.fade_blue);
-                    set2.setFillDrawable(drawable2);
-                    mChart2.setVisibleXRangeMaximum(8);
-                    ArrayList<ILineDataSet> dataSets2 = new ArrayList<>();
-                    dataSets2.add(set2);
-                    LineData data2 = new LineData(dataSets2);
-                    mChart2.setData(data2);
-                    xAxis2.setGranularity(1.0f);
-                    mChart2.getDescription().setEnabled(false);
-                    xAxis2.setPosition(XAxis.XAxisPosition.BOTTOM);
-                    xAxis2.setLabelRotationAngle(-45.0f);
-                    if (i2 != 0) {
-                        String CurrentDate = dateTimeValues[i2];
-                        String LastDate = dateTimeValues[i2 - 1];
-                        SimpleDateFormat sdf_currentDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                        SimpleDateFormat sdf_LastDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                        Date date_current = null;
-                        Date date_last = null;
-                        try {
-                            date_current = sdf_currentDate.parse(CurrentDate);
-                            date_last = sdf_LastDate.parse(LastDate);
 
-                        } catch (ParseException e) {
-                            e.printStackTrace();
-                        }
-                        long millisCurrent = date_current.getTime();
-                        Log.w(TAG, "time millis current:" + String.valueOf(millisCurrent));
-                        long millisLast = date_last.getTime();
-                        double delta_time = (millisCurrent - millisLast) / 1000;
-                        double current_power = Float.parseFloat(yAxisValues[i2]);
-                        double current_energy = delta_time * current_power;
-                        mEnergy = mEnergy + current_energy;
-                    }
-                    i2++;
-                    x = true;
-                }
                 if (!yvaluesString.isEmpty()){
                     mChart.getDescription().setText("Max Voltage [V] = " + String.valueOf(maxVoltage));
                 }else {
                     mChart.getDescription().setText("Generated Voltage [V]");
                 }
-                if (!yvalues2String.isEmpty()){
-                    mChart2.getDescription().setText("Max Power [uW] = " + String.valueOf(maxPower));
-                }else{
-                    mChart2.getDescription().setText("Generated Power [uW]");
-                }
-                xAxis2.setValueFormatter(new MyXAxisValueFormatter(values2));
                 String partialEnergy = String.format("%.2f", mEnergy);
                 String totalEnergy = "Energy [uJ]: " + partialEnergy;
                 Log.w("ENERGY:", totalEnergy);
                 tvEnergy = (TextView) rootView.findViewById(R.id.tv_energy);
                 tvEnergy.setText(totalEnergy);
-                mChart2.notifyDataSetChanged();
-                mChart2.invalidate();
                 db.close();
                 cursor.close();
             }
@@ -619,18 +550,26 @@ public class Tab2Historicos extends Fragment implements
     }
 
     private void colocar_fecha1() {
+        String dayFrom = "";
+        if(mDayFrom < 10){
+            dayFrom = "0"+String.valueOf(mDayFrom);
+        }
         if (mMonthFrom + 1 <= 9) {
-            dateFrom.setText(mYearFrom + "-0" + (mMonthFrom + 1) + "-" + mDayFrom + " ");
+            dateFrom.setText(mYearFrom + "-0" + (mMonthFrom + 1) + "-" + dayFrom + " ");
         } else {
-            dateFrom.setText(mYearFrom + "-" + (mMonthFrom + 1) + "-" + mDayFrom + " ");
+            dateFrom.setText(mYearFrom + "-" + (mMonthFrom + 1) + "-" + dayFrom + " ");
         }
     }
 
     private void colocar_fecha2() {
+        String dayTo = "";
+        if(mDayTo < 10){
+            dayTo = "0"+String.valueOf(mDayTo);
+        }
         if (mMonthTo + 1 <= 9) {
-            dateTo.setText(mYearTo + "-0" + (mMonthTo + 1) + "-" + mDayTo + " ");
+            dateTo.setText(mYearTo + "-0" + (mMonthTo + 1) + "-" + dayTo + " ");
         } else {
-            dateTo.setText(mYearTo + "-" + (mMonthTo + 1) + "-" + mDayTo + " ");
+            dateTo.setText(mYearTo + "-" + (mMonthTo + 1) + "-" + dayTo + " ");
         }
     }
 
