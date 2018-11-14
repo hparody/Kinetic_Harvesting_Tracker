@@ -7,22 +7,22 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.2.0"
-    timestamp="1541581972413"
+    timestamp="1542167016998"
     token="2121490147970335520"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="3118" />
+        duration="21444" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="239" />
+        duration="613" />
     <task
         name="verifier"
-        duration="58" />
+        duration="615" />
 
     <artifact
         location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
@@ -33,7 +33,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1541577819393"
+        timestamp="1542164007589"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -75,16 +75,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1541581787236"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1541581972413"
+        timestamp="1542167016998"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Hemel Parody\Desktop\VoltageApp\app\build\intermediates\split-apk\debug\slices\slice_2.apk"

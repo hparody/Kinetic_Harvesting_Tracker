@@ -60,7 +60,9 @@ public class Tab2Historicos extends Fragment implements
 
     private double mEnergy;
     private double rawEnergy;
+    private double mHarvestedEnergy;
     TextView tvEnergy;
+    TextView tvHarvestedEnergy;
 
     EditText dateTo;
     EditText dateFrom;
@@ -163,6 +165,8 @@ public class Tab2Historicos extends Fragment implements
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.tab2historicos, container, false);
+
+        tvHarvestedEnergy = (TextView) rootView.findViewById(R.id.tv_harvested_energy);
 
         //From Calendar
         sMonthFrom = C.get(Calendar.MONTH);
@@ -352,6 +356,7 @@ public class Tab2Historicos extends Fragment implements
 
                 XAxis xAxis = mChart.getXAxis();
                 int i1 = 0; mEnergy = 0; rawEnergy = 0;
+                mHarvestedEnergy = 0;
                 Log.w("INFO",yvaluesString.toString() );
                 Float pastVoltage;
                 Float currentVoltage;
@@ -393,6 +398,8 @@ public class Tab2Historicos extends Fragment implements
                                 Log.w("INFO","mEnergy: "+mEnergy);
                                 mEnergy = mEnergy + Math.abs(rawEnergy);
                             }
+                        }else{
+                            mHarvestedEnergy = mHarvestedEnergy + rawEnergy;
                         }
                     } else {
                         YAxis yAxis = mChart.getAxisLeft();
@@ -426,10 +433,13 @@ public class Tab2Historicos extends Fragment implements
                     mChart.getDescription().setText("Generated Voltage [V]");
                 }
                 String partialEnergy = String.format("%.2f", mEnergy);
-                String totalEnergy = "Energy [uJ]: " + partialEnergy;
+                String totalEnergy = "Transfered Energy [uJ]: " + partialEnergy;
                 Log.w("ENERGY:", totalEnergy);
                 tvEnergy = (TextView) rootView.findViewById(R.id.tv_energy);
                 tvEnergy.setText(totalEnergy);
+                String partialHarvestedEnergy = String.format("%.2f", mHarvestedEnergy);
+                String totalHarvestedEnergy = "Harvested Energy [uJ]: " + partialHarvestedEnergy;
+                tvHarvestedEnergy.setText(String.valueOf(totalHarvestedEnergy));
                 db.close();
                 cursor.close();
             }
@@ -551,12 +561,16 @@ public class Tab2Historicos extends Fragment implements
 
     private void colocar_fecha1() {
         String dayFrom = "";
+        Log.w("INFO","mDayFrom: "+mDayFrom);
         if(mDayFrom < 10){
             dayFrom = "0"+String.valueOf(mDayFrom);
+        }else{
+            dayFrom = String.valueOf(mDayFrom);
         }
         if (mMonthFrom + 1 <= 9) {
             dateFrom.setText(mYearFrom + "-0" + (mMonthFrom + 1) + "-" + dayFrom + " ");
         } else {
+            Log.w("INFO","dayFrom: "+dayFrom);
             dateFrom.setText(mYearFrom + "-" + (mMonthFrom + 1) + "-" + dayFrom + " ");
         }
     }
@@ -565,6 +579,8 @@ public class Tab2Historicos extends Fragment implements
         String dayTo = "";
         if(mDayTo < 10){
             dayTo = "0"+String.valueOf(mDayTo);
+        }else{
+            dayTo = String.valueOf(mDayTo);
         }
         if (mMonthTo + 1 <= 9) {
             dateTo.setText(mYearTo + "-0" + (mMonthTo + 1) + "-" + dayTo + " ");

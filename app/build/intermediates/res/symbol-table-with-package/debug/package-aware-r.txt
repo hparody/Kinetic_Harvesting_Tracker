@@ -611,6 +611,7 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color colorAccent
+color colorHarvesting
 color colorPrimary
 color colorPrimaryDark
 color colorProgressBar
@@ -1194,6 +1195,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id relativeLayout2
+id relative_layout_buttons
 id relative_layout_pb
 id right
 id right_icon
@@ -1280,6 +1282,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id tv_delete
 id tv_energy
+id tv_harvested_energy
 id tv_received_data
 id uniform
 id unlabeled

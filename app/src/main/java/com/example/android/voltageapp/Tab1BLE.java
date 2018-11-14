@@ -112,7 +112,7 @@ public class Tab1BLE extends Fragment{
 
     private static final String CLOSE_APP_ACTION = "CLOSE_APP_BROADCAST";
     private static final String OPEN_APP_ACTION = "OPEN_APP_BROADCAST";
-    public String currentHearthRateLabel = "Current Voltage: ";
+    public String currentHearthRateLabel = "Current RPM: ";
     public String currentHearthRate = "";
     public NotificationCompat.Builder mBuilder;
     public NotificationManager notificationManager;
@@ -350,7 +350,7 @@ public class Tab1BLE extends Fragment{
         mBuilder = new NotificationCompat.Builder(Tab1BLE.this.getActivity(),Notification_Channel_ID)
                 .setColor(ContextCompat.getColor(context,R.color.colorPrimary))
                 .setSmallIcon(R.drawable.ic_ble)
-                .setContentTitle("Kinetic Harvesting Tracker")
+                .setContentTitle("Heart Rate App")
                 .setContentText(currentHearthRateLabel)
                 .setPriority(NotificationCompat.PRIORITY_HIGH);
     }
@@ -441,12 +441,13 @@ public class Tab1BLE extends Fragment{
 
         @Override
         protected String doInBackground(String... data) {
-            String Message = data[0];
-            currentHearthRate = currentHearthRateLabel + Message + " V";
-            String messageToShow = Message + " V";
+            String rawMessage = data[0];
+            String[] Message = rawMessage.split("#");
+            currentHearthRate = currentHearthRateLabel + Message[1] + " rpm";
+            String messageToShow = Message[1] + " rpm";
             showMessage(messageToShow);
-            mVoltage = Float.parseFloat(Message);
-            Double power =  Math.pow(Double.parseDouble(Message), 2)/0.474;
+            mVoltage = Float.parseFloat(Message[0].trim());
+            Double power =  Math.pow(Double.parseDouble(Message[0].trim()), 2)/0.474;
             mPower = Float.parseFloat(String.valueOf(power));
             registrarTramaBLE(mPower,mVoltage);
             triggerNotification(currentHearthRate);

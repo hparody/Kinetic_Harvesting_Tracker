@@ -34,12 +34,13 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="40dp"
+                android:capitalize="words"
                 android:fontFamily="serif"
-                android:text="Kinetic Harvesting Tracker"
+                android:text="Heart Rate Monitor"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="#000"
-                android:textSize="35sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 app:fontFamily="@font/martel_sans_black" />
 
@@ -81,7 +82,7 @@
                     android:layout_toRightOf="@+id/sw_Btn_Connect"
                     android:foregroundGravity="center_vertical|center_horizontal|center"
                     android:gravity="center_horizontal"
-                    android:text="Current Voltage"
+                    android:text="Current Heart Rate"
                     android:textAlignment="center"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -126,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:text="FakeData"
                     android:onClick="registrarTramaFalsa"
-                    android:visibility="visible" />
+                    android:visibility="gone" />
 
                 <ProgressBar
                     android:id="@+id/pb_loading_indicator"
