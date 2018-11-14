@@ -19,6 +19,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
@@ -36,6 +39,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -85,7 +89,7 @@ public class Tab1BLE extends Fragment{
 
     private static final int REQUEST_ENABLE_BT = 1;
     public static final String NO_DATA_MESSAGE = "No Data";
-    public String TAG = "BATTERY_MONITOR";
+    public String TAG = "HEART_RATE_MONITOR";
         private static final int PERMISSION_REQUEST_COARSE_LOCATION = 456;
     public boolean LOCATION_PERMISSION;
 
@@ -101,6 +105,7 @@ public class Tab1BLE extends Fragment{
     // UI parameters needed
     public Switch connect;
     public TextView display_message;
+    public TextView display_voltage;
     public ProgressBar loading_Indicator;
 
     // Notification
@@ -112,7 +117,8 @@ public class Tab1BLE extends Fragment{
 
     private static final String CLOSE_APP_ACTION = "CLOSE_APP_BROADCAST";
     private static final String OPEN_APP_ACTION = "OPEN_APP_BROADCAST";
-    public String currentHearthRateLabel = "Current RPM: ";
+    public String currentHearthRateLabel = "Current HR: ";
+    public String currentVoltageLabel = "Current Voltage: ";
     public String currentHearthRate = "";
     public NotificationCompat.Builder mBuilder;
     public NotificationManager notificationManager;
@@ -193,6 +199,21 @@ public class Tab1BLE extends Fragment{
                 ConnectOnClick();
             }
         });
+        display_voltage = rootView.findViewById(R.id.tv_received_voltage);
+        ImageView imageView = rootView.findViewById(R.id.imageView);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            imageView.setImageResource(R.drawable.drawable_animation);
+
+        } else {
+            Drawable d = ContextCompat.getDrawable(getActivity(), R.drawable.drawable_animation);
+            Bitmap b = Bitmap.createBitmap(d.getIntrinsicWidth(),
+                    d.getIntrinsicHeight(),
+                    Bitmap.Config.ARGB_8888);
+            Canvas c = new Canvas(b);
+            d.setBounds(0, 0, c.getWidth(), c.getHeight());
+            d.draw(c);
+            imageView.setImageBitmap(b);
+        }
         return rootView;
     }
 
@@ -215,7 +236,8 @@ public class Tab1BLE extends Fragment{
                 notificationManager.cancelAll();
                 connectingToast.cancel();
                 scanLeDevice(false);
-                display_message.setText("Current Voltage");
+                display_message.setText("Current Heart Rate");
+                display_voltage.setText("Current Voltage");
             }
         }else{
             Toast.makeText(getActivity(), "Please, enable bluetooth on the device", Toast.LENGTH_SHORT).show();
@@ -350,8 +372,10 @@ public class Tab1BLE extends Fragment{
         mBuilder = new NotificationCompat.Builder(Tab1BLE.this.getActivity(),Notification_Channel_ID)
                 .setColor(ContextCompat.getColor(context,R.color.colorPrimary))
                 .setSmallIcon(R.drawable.ic_ble)
-                .setContentTitle("Heart Rate App")
-                .setContentText(currentHearthRateLabel)
+                .setContentTitle("Heart Rate Monitor")
+                .setContentText(currentHearthRateLabel+"\n"+currentVoltageLabel)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(currentHearthRateLabel+"\n"+currentVoltageLabel)
+                        .setSummaryText("Heart Rate and Voltage").setBigContentTitle("Heart Rate Monitor"))
                 .setPriority(NotificationCompat.PRIORITY_HIGH);
     }
 
@@ -437,20 +461,24 @@ public class Tab1BLE extends Fragment{
         }
     };
 
+    public BluetoothAdapter getmBluetoothAdapter() {
+        return mBluetoothAdapter;
+    }
+
     private class SaveDatabase extends AsyncTask<String, String, String> {
 
         @Override
         protected String doInBackground(String... data) {
             String rawMessage = data[0];
             String[] Message = rawMessage.split("#");
-            currentHearthRate = currentHearthRateLabel + Message[1] + " rpm";
-            String messageToShow = Message[1] + " rpm";
-            showMessage(messageToShow);
+            currentHearthRate = currentHearthRateLabel + Message[1] + " bpm";
+            String message_Voltage = "Current Voltage " + Message[0] + " V";
+            showMessage(currentHearthRate, message_Voltage);
             mVoltage = Float.parseFloat(Message[0].trim());
             Double power =  Math.pow(Double.parseDouble(Message[0].trim()), 2)/0.474;
             mPower = Float.parseFloat(String.valueOf(power));
             registrarTramaBLE(mPower,mVoltage);
-            triggerNotification(currentHearthRate);
+            triggerNotification(currentHearthRate, message_Voltage);
             return null;
         }
 
@@ -459,16 +487,19 @@ public class Tab1BLE extends Fragment{
         }
     }
 
-    public void showMessage(final String messageToShow) {
+    public void showMessage(final String messageToShow, final String message_voltage) {
         showMessageHandler.post(new Runnable() {
             public void run(){
                 display_message.setText(messageToShow);
+                display_voltage.setText(message_voltage);
             }
         });
     }
 
-    public void triggerNotification(String hearthRate){
-        mBuilder.setContentText(hearthRate);
+    public void triggerNotification(String heartRate,String voltage){
+        mBuilder.setStyle(new NotificationCompat.BigTextStyle().bigText(heartRate+"\n"+voltage)
+                .setSummaryText("Heart Rate and Voltage").setBigContentTitle("Heart Rate Monitor"))
+                .setContentText(heartRate+"\n"+voltage);
         notification = mBuilder.build();
         notification.flags = notification.flags | Notification.FLAG_ONGOING_EVENT;
         notificationManager.notify(Notification_ID, notification);

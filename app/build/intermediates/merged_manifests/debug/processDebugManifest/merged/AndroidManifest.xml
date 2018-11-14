@@ -21,11 +21,10 @@
         android:allowBackup="true"
         android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:debuggable="true"
-        android:icon="@mipmap/ic_launcher_voltage_round"
+        android:icon="@mipmap/ic_launcher_heart_round"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_voltage_round"
+        android:roundIcon="@mipmap/ic_launcher_heart_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.android.voltageapp.MainActivity"

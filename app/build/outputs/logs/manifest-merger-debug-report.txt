@@ -90,9 +90,9 @@ MERGED from [com.android.support:versionedparcelable:28.0.0-rc02] C:\Users\Hemel
 	android:label
 		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:16:9-41
 	android:roundIcon
-		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:17:9-62
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:17:9-60
 	android:icon
-		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:15:9-57
+		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:15:9-55
 	android:allowBackup
 		ADDED from C:\Users\Hemel Parody\Desktop\VoltageApp\app\src\main\AndroidManifest.xml:14:9-35
 	android:theme

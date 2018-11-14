@@ -95,7 +95,7 @@ public class Tab2Historicos extends Fragment implements
     ArrayList<HeartRate> listaTrama;
     ArrayList<Double> listaTramaDouble;
 //    SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
-    Float capacitor = Float.parseFloat("1000");
+    Float capacitor = Float.parseFloat("10");
 
     //Here starts the LineChart Code
     ConexionSQLiteHelper conn;
@@ -291,7 +291,7 @@ public class Tab2Historicos extends Fragment implements
                 listViewPersonas = (ListView) rootView.findViewById(R.id.listViewPersonas);
 
 
-                consultarListaPersonas();
+                databaseQuery();
 
                 ArrayAdapter adaptador = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, listaInformacion);
                 adaptador.notifyDataSetChanged();
@@ -513,7 +513,7 @@ public class Tab2Historicos extends Fragment implements
 
 
 
-    private void consultarListaPersonas() {
+    private void databaseQuery() {
 
         textDateTO = dateTo.getText().toString();
         textDateFROM = dateFrom.getText().toString();
@@ -527,8 +527,6 @@ public class Tab2Historicos extends Fragment implements
         Cursor cursor = db.rawQuery("SELECT * FROM " + Utilidades.TABLA_HEARTRATE + " WHERE " + Utilidades.CAMPO_DATE_TIME + " >= Datetime('" + textDateFROM + textTimeFrom + "') AND " + Utilidades.CAMPO_DATE_TIME + "<= Datetime('" + textDateTO + textTimeTo + "')", null);
 
         try {
-
-
             while (cursor.moveToNext()) {
                 heartRate = new HeartRate();
                 heartRate.setId(cursor.getInt(0));
@@ -537,7 +535,6 @@ public class Tab2Historicos extends Fragment implements
                 heartRate.setTrama(cursor.getString(3));
                 heartRate.setDateTime(cursor.getString(4));
                 listaHeartRate.add(heartRate);
-
             }
         }finally {
             if (cursor != null && !cursor.isClosed()){

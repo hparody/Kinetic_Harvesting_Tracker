@@ -1,4 +1,4 @@
-#Tue Nov 13 22:44:30 COT 2018
+#Wed Nov 14 18:30:59 COT 2018
 base.0=C\:\\Users\\Hemel Parody\\Desktop\\VoltageApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
 path.0=classes.dex
 renamed.0=classes.dex

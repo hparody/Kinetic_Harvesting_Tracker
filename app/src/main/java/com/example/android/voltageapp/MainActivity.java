@@ -1,5 +1,6 @@
 package com.example.android.voltageapp;
 
+import android.bluetooth.BluetoothAdapter;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
     private SectionsPagerAdapter mSectionsPagerAdapter;
+    private BluetoothAdapter bluetoothAdapter;
+    private Tab1BLE tab1;
+
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -98,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position){
                 case 0:
-                    Tab1BLE tab1 = new Tab1BLE();
+                    tab1 = new Tab1BLE();
                     return tab1;
                 case 1:
                     Tab2Historicos tab2 = new Tab2Historicos();
@@ -123,9 +127,9 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     return "BLE";
                 case 1:
-                    return "Históricos";
+                    return "ENERGY HISTORICS";
                 case 2:
-                    return "Battery";
+                    return "HEARTH RATE HISTORICS";
             }
             return null;
         }
@@ -134,5 +138,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        bluetoothAdapter = tab1.getmBluetoothAdapter();
+        if(bluetoothAdapter != null){
+            bluetoothAdapter.disable();
+        }
     }
 }

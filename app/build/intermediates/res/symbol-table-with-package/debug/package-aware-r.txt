@@ -1020,6 +1020,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable drawable_animation
 drawable fade_blue
 drawable fade_red
 drawable ic_ble
@@ -1152,13 +1153,13 @@ id icon_group
 id ifRoom
 id image
 id imageView
-id imageView2
 id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
+id layout_down
 id layout_f
 id left
 id line1
@@ -1196,6 +1197,7 @@ id progress_horizontal
 id radio
 id relativeLayout2
 id relative_layout_buttons
+id relative_layout_heart
 id relative_layout_pb
 id right
 id right_icon
@@ -1284,6 +1286,7 @@ id tv_delete
 id tv_energy
 id tv_harvested_energy
 id tv_received_data
+id tv_received_voltage
 id uniform
 id unlabeled
 id up
@@ -1375,6 +1378,8 @@ menu menu_main
 mipmap charging
 mipmap ic_launcher
 mipmap ic_launcher_foreground
+mipmap ic_launcher_heart
+mipmap ic_launcher_heart_round
 mipmap ic_launcher_round
 mipmap ic_launcher_voltage
 mipmap ic_launcher_voltage_round

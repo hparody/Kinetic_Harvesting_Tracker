@@ -8,14 +8,24 @@ public class HeartRate {
     private String fecha;
     private String trama;
     private String potencia;
+    private String voltaje;
 
-    public HeartRate(Integer id, String fecha, String hora, String trama, String dateTime, String potencia) {
+    public String getVoltaje() {
+        return voltaje;
+    }
+
+    public void setVoltaje(String voltaje) {
+        this.voltaje = voltaje;
+    }
+
+    public HeartRate(Integer id, String fecha, String hora, String trama, String dateTime, String potencia, String voltaje) {
         this.id = id;
         this.fecha = fecha;
         this.trama = trama;
         this.hora = hora;
         this.dateTime = dateTime;
         this.potencia = potencia;
+        this.voltaje = voltaje;
     }
 
     public HeartRate() {
